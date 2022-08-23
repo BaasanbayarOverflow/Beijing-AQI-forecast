@@ -125,4 +125,34 @@ def toDatetime(dataframe):
     
 dataframe_copy['date'] = dataframe_copy.apply(toDatetime, axis=1)
 
+
+fig.add_traces(
+    go.Line(
+        x = dataframe['PM2.5'].index, 
+        y = dataframe['PM2.5'],
+        name = 'PM2.5',
+        line = dict(color='#0E1326'),
+       )
+)
+
+fig.add_traces(
+    go.Line(
+        x = prediction_list[0].pd_dataframe().index, 
+        y = prediction_list[0].pd_dataframe()['PM2.5'],
+        name = 'PM2.5',
+        line = dict(color='#0E1326'),
+       )
+)
+
+fig.add_traces(
+    go.Line(
+        x = dataframe['PM10'].index,
+        y = dataframe['PM10'],
+        name = 'PM10',
+        line = dict(color='#005AA9'),
+    )
+)
+
+
+
 """

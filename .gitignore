@@ -1,2 +1,6 @@
 .ipynb_checkpoints/
+__pycache__/
 darts_logs/
+.vs/
+Untitled.ipynb
+main.ipynb
